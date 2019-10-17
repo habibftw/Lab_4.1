@@ -4,8 +4,15 @@ print "*handler page*"."<br>"."<br>";
 
 $email = $_POST['email'];
 
-print "Email: ";
-echo $email;
+if ( $email == "" )
+ {
+	 echo "Enter email";
+}
+ else
+   { print "Email: ";
+   echo $email;}
+
+
 
 ?>
 
@@ -19,10 +26,8 @@ echo $email;
 			<legend><b>Email</b></legend>
 			<table border="0" >
 				<tr> 
-					<input type="text" name="email" value= <?php echo $email;?> />
-					<?php
-					echo $email;
-					?>
+					<input type="text" name="email" value= <?=$email;?> />
+					<?=$email;?>
 
 					<p>____________________________</p>
 					
