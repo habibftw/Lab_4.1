@@ -4,8 +4,17 @@ print "*handler page*"."<br>"."<br>";
 
 $date = $_POST['dob'];
 
-print "Date of birth: ";
+if ($date == "")
+{
+	echo "Enter date";
+}
+else
+{
+	print "Date of birth: ";
 echo $date;
+}
+
+
 
 ?>
 
