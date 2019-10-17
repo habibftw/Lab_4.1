@@ -2,10 +2,17 @@
 
 print "*handler page*"."<br>"."<br>";
 
+
 $name = $_POST['name'];
 
-print "Name: ";
-echo $name;
+if( $name == "" )
+	
+	{ echo "Enter name";}
+else 
+	{
+		print "Name: ";
+		echo $name;
+	}
 
 ?>
 
@@ -19,10 +26,8 @@ echo $name;
 			<legend><b>Name</b></legend>
 			<table border="0" >
 				<tr> 
-					<input type="text" name="name" value= <?php echo $name;?> />
-					<?php
-					echo $name;
-					?>
+					<input type="text" name="name" value= <?= $name;?> />
+					<?=$name;?>
 
 					<p>____________________________</p>
 					
@@ -30,6 +35,7 @@ echo $name;
 				
 					<td>
 						<input type="submit" name="submit" value="Submit">
+						
 					</td>
 				</tr>
 			</table>
